@@ -215,3 +215,21 @@ nav ul li a:hover {
     margin-bottom: 10px;
     font-size: 1.3rem;
 }
+/* استایل برای افکت هاور دکمه ها */
+    .download-btn:hover,
+    .btn:hover,
+    .btn-contact:hover,
+    .btn-contact-telegram:hover {
+        background: #fff !important; /* رنگ سفید */
+        color: #ff00ff !important; /* رنگ صورتی نئونی */
+        box-shadow: 0 0 15px #fff, 0 0 25px #ff00ff !important; /* درخشش سفید و صورتی */
+        transform: translateY(-2px); /* کمی بالا رفتن دکمه */
+        transition: all 0.3s ease-in-out; /* انیمیشن نرم */
+    }
+
+    /* اگر بخواهی برای دکمه تلگرام رنگ متفاوتی داشته باشه */
+    .btn-contact-telegram:hover {
+        background: #00bfff !important; /* آبی نئونی */
+        color: white !important;
+        box-shadow: 0 0 15px #00bfff, 0 0 25px #00bfff !important;
+    }
