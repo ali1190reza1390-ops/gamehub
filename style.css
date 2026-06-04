@@ -1,3 +1,24 @@
+:root {
+        /* پالت رنگی RGB */
+        --bg-dark:           rgb(10, 10, 40);      /* پس زمینه اصلی تیره */
+        --text-light:        rgb(230, 230, 255);   /* متن روشن */
+        --neon-pink:         rgb(255, 0, 255);     /* صورتی نئونی */
+        --neon-blue:         rgb(0, 255, 255);     /* آبی الکتریکی */
+        --neon-green:        rgb(150, 255, 50);    /* سبز لیمویی نئونی */
+        --accent-color:      var(--neon-pink);     /* رنگ اصلی برای تاکید */
+        --secondary-accent:  var(--neon-blue);     /* رنگ دوم برای تاکید */
+
+        /* سایه ها و افکت ها */
+        --glow-pink:         rgba(255, 0, 255, 0.7);
+        --glow-blue:         rgba(0, 255, 255, 0.7);
+        --shadow-darker:     rgba(0, 0, 0, 0.5);
+    }
+
+    /* انیمیشن نئونی */
+    @keyframes neonGlow {
+      from { text-shadow: 0 0 5px var(--text-light), 0 0 10px var(--text-light), 0 0 15px var(--accent-color), 0 0 20px var(--accent-color), 0 0 25px var(--accent-color), 0 0 30px var(--accent-color); }
+      to { text-shadow: 0 0 10px var(--text-light), 0 0 20px var(--text-light), 0 0 30px var(--accent-color), 0 0 40px var(--accent-color), 0 0 50px var(--accent-color), 0 0 60px var(--accent-color); }
+    }
 /* General Styles */
 :root {
     --primary-color: #0a0a0a; /* مشکی تیره */
@@ -14,10 +35,15 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    line-height: 1.6;
+            background-color: var(--bg-dark); /* استفاده از متغیر */
+            background-image: linear-gradient(135deg, var(--accent-color) 0%, var(--bg-dark) 50%, var(--secondary-accent) 100%); /* گرادیانت رنگی */
+            color: var(--text-light);
+            font-family: 'Orbitron', sans-serif; /* فونت نئونی */
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* جلوگیری از اسکرول افقی */
+        }
 }
 
 .container {
@@ -38,20 +64,19 @@ a:hover {
 
 /* Header */
 header {
-    background-color: var(--secondary-color);
-    padding: 1rem 0;
-    border-bottom: 2px solid var(--accent-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+            background-color: rgba(0, 0, 0, 0.4); /* پس‌زمینه کمی شفاف */
+            padding: 25px 0;
+            box-shadow: 0 0 15px var(--glow-pink), 0 0 25px var(--glow-blue); /* ترکیب دو تا سایه نئونی */
+            position: relative; /* برای لایه های زیرین */
+            z-index: 10;
+        }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
+        header h1 {
+            color: var(--text-light);
+            text-shadow: 0 0 8px var(--text-light), 0 0 15px var(--accent-color), 0 0 25px var(--accent-color), 0 0 35px var(--accent-color);
+            animation: neonGlow 1.5s ease-in-out infinite alternate;
+            font-size: 3em; /* فونت بزرگتر برای عنوان اصلی */
+        }
 .logo {
     color: var(--accent-color);
     font-size: 1.8rem;
