@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Hub</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Tahoma;
+background:#0b0b12;
+color:white;
+text-align:center;
+}
+
+/* هدر */
+
+header{
+background:linear-gradient(90deg,#8a00ff,#ff00c8);
+padding:25px;
+box-shadow:0 0 20px #8a00ff;
+}
+
+header h1{
+margin:0;
+font-size:40px;
+color:white;
+text-shadow:0 0 15px #ff00c8;
+}
+
+/* منو */
+
+nav{
+background:#111;
+padding:12px;
+}
+
+nav a{
+color:#c46cff;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ff00c8;
+}
+
+/* عنوان */
+
+h2{
+color:#c46cff;
+margin-top:40px;
+text-shadow:0 0 10px #ff00c8;
+}
+
+/* لیست بازی */
+
+.games{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+padding:30px;
+}
+
+/* کارت بازی */
+
+.game{
+background:#161620;
+width:260px;
+padding:15px;
+border-radius:10px;
+transition:0.3s;
+border:1px solid #333;
+}
+
+.game:hover{
+transform:translateY(-8px);
+box-shadow:0 0 20px #8a00ff,0 0 10px #00ff88;
+}
+
+.game img{
+width:100%;
+border-radius:8px;
+}
+
+/* عنوان بازی */
+
+.game h3{
+color:#ff00c8;
+margin:10px 0;
+}
+
+/* توضیح */
+
+.game p{
+font-size:14px;
+color:#bbb;
+}
+
+/* دکمه */
+
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 20px;
+background:linear-gradient(45deg,#8a00ff,#ff0055);
+color:white;
+text-decoration:none;
+border-radius:20px;
+}
+
+.btn:hover{
+box-shadow:0 0 15px #ff0055;
+}
+
+/* فوتر */
+
+footer{
+margin-top:40px;
+padding:25px;
+color:#777;
+font-size:13px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>GAME HUB</h1>
+</header>
+
+<nav>
+<a href="#">صفحه اصلی</a>
+<a href="#">فارسی سازها</a>
+<a href="#">بازی ها</a>
+<a href="#">تماس</a>
+</nav>
+
+<h2>فارسی ساز بازی ها</h2>
+
+<div class="games">
+
+<div class="game">
+<img src="GTA V.jpg">
+<h3>GTA V</h3>
+<p>فارسی ساز کامل داستان و دیالوگ ها</p>
+<a class="btn" href="gta.html">دانلود</a>
+</div>
+
+<div class="game">
+<img src="Euro Truck 2.jpg">
+<h3>Euro Truck 2</h3>
+<p>ترجمه کامل منو ها و تنظیمات</p>
+<a class="btn" href="#">دانلود</a>
+</div>
+
+<div class="game">
+<img src="Red Dead 1.jpg">
+<h3>Red Dead 1</h3>
+<p>فارسی ساز زیرنویس کامل</p>
+<a class="btn" href="#">دانلود</a>
+</div>
+
+</div>
+
+<footer>
+© 2026 Game Hub - ساخته شده توسط علیرضا
+</footer>
+
+</body>
+</html>
